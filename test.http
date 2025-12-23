@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:4004/odata/v4/productshop/Products
+
+################GET All products##########
+GET {{baseUrl}}
+
+################GET product by ID###########
+GET {{baseUrl}}('a74e2cd1-f7c3-47d6-9558-2ae240d6939c')
+
+################GET products by category###########
+GET {{baseUrl}}?$filter=category eq 'Grocery'
+
+################Create product############
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "name": "ketchup",
+  "category": "Grocery"
+}
+
+################Update product##############
+PUT {{baseUrl}}('a74e2cd1-f7c3-47d6-9558-2ae240d6939c')
+Content-Type: application/json
+
+{
+  "name": "sugar",
+  "category": "Grocery"
+}
+
+################Delete product###############
+DELETE {{baseUrl}}('a74e2cd1-f7c3-47d6-9558-2ae240d6939c')
+Content-Type: application/json
+
+{
+  "name": "sugar",
+  "category": "Grocery"
+}
