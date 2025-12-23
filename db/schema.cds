@@ -3,10 +3,9 @@ namespace project.db;
 
 entity Products : cuid, managed {
     name : String;
-    category : Association to Categories;
+    category : Category;
 }
 
-entity Categories : cuid, managed {
-    name : String;
-    products: Association to many Products on products.category = $self;
+type Category : String enum {
+  Drinks; Grocery;
 }

@@ -1,3 +1,3 @@
-ID,name,category_ID,createdAt,createdBy,modifiedAt,modifiedBy
-10374841-c993-4aa2-bd7a-b56cc0db8830,coffee,18956902-cdaa-4b6f-b83d-59ba1368f7b9,2013-05-18T00:00:00.000Z
-10374842-f7d4-43af-b70b-3f9cd184169a,rice,16912250-20d3-4ccc-a85d-f0955827cd6a,2005-02-21T00:00:00.000Z
+ID,name,category,createdAt,createdBy,modifiedAt,modifiedBy
+14600041-6f12-4626-8b78-01d0598a0b92,coffee,Drinks,2017-06-25T00:00:00.000Z,createdBy.8oxgp@example.net,2020-08-30T00:00:00.000Z,modifiedBy.8oxgp@example.net
+14600042-8294-4f76-b8e1-3e4b0bd20fbd,rice,Grocery,2005-07-19T00:00:00.000Z,createdBy.8oxgq@example.org,2019-03-23T00:00:00.000Z,modifiedBy.8oxgq@example.com
