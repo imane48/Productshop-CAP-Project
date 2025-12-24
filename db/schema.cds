@@ -2,7 +2,7 @@ using { managed, cuid } from '@sap/cds/common';
 namespace project.db;
 
 entity Products : cuid, managed {
-    name : String;
+    name : String @mandatory;
     category : Category @assert.range: true;
 }
 

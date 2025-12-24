@@ -1,0 +1,23 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+    <Dialog id="editDialog" title="Modifier le Produit">
+        <content>
+            <f:SimpleForm id="_IDGenSimpleForm1" editable="true">
+                <f:content>
+                    <Label id="_IDGenLabel" text="Name" required="true" />
+                    <Input id="_IDGenInput" value="{name}" /> 
+                    <Label id="_IDGenLabel3" text="Category" />
+                    <Select id="_IDGenSelect" selectedKey="{category}">
+                        <core:Item id="_IDGenItem2" key="Drinks" text="Drinks" />
+                        <core:Item id="_IDGenItem3" key="Grocery" text="Grocery" />
+                    </Select>
+                </f:content>
+            </f:SimpleForm>
+        </content>
+        <beginButton>
+            <Button id="_IDGenButton4" text="Save" type="Accept" press=".onSaveEdit" />
+        </beginButton>
+        <endButton>
+            <Button id="_IDGenButton5" text="Discard" press=".onCloseEditDialog" />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
