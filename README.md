@@ -88,6 +88,7 @@ The following scenarios are covered:
 - Service availability check
 - Read products (GET)
 - Create product (POST)
+- Update product (PATCH)
 - Delete product (DELETE)
 - Validation and error handling
 
