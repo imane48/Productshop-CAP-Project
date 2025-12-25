@@ -1,25 +1,106 @@
-# Getting Started
+# Product Management Application (CAP + SAPUI5)
 
-Welcome to your new project.
+## Overview
 
-It contains these folders and files, following our recommended project layout:
+This project is a full-stack application developed using the SAP Cloud Application Programming Model (CAP) for the backend and SAPUI5 (Freestyle) for the frontend.
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+The backend exposes OData V4 services to manage products, while the frontend provides a simple user interface to visualize and interact with the data.
 
+The solution is designed to be easy to run locally, simple to test, and straightforward to extend.
 
-## Next Steps
+## Technologies Used
 
-- Open a new terminal and run `cds watch`
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
+- Node.js
+- SAP Cloud Application Programming Model (CAP)
+- OData V4
+- SAPUI5 (Freestyle)
+- SAP Business Application Studio
+- REST Client (test.http)
 
 
-## Learn More
+## Prerequisites
 
-Learn more at https://cap.cloud.sap/docs/get-started/.
+Before running the project locally, ensure that the following tools are available:
+
+- Node.js (version 18 or higher)
+- npm
+- SAP Business Application Studio (recommended)
+- REST Client extension (available by default in BAS)
+
+## How to Run the Application Locally
+
+### Install Dependencies
+
+From the root directory of the project, run:
+
+```bash
+npm install
+```
+### Start the CAP Server
+
+Run the following command:
+
+```bash
+cds watch
+```
+
+### Access Backend Services
+
+Once the server is running, the OData service root is available at:
+http://localhost:4004/odata/v4/productshop/
+
+The Products entity can be accessed at:
+http://localhost:4004/odata/v4/productshop/Products
+
+### Access the Frontend Application
+
+The SAPUI5 frontend application is available at:
+http://localhost:4004/ui/index.html
+
+## Data Model
+
+The backend data model is defined using CDS.
+
+Entity:
+- Products
+  - name (String)
+  - category (Enum: Drinks, Grocery)
+
+The CAP framework automatically handles persistence, validation, and OData exposure.
+
+## API Testing
+
+### Testing Approach
+
+Backend APIs are tested using a REST Client HTTP file (test.http), which allows manual and repeatable testing of the OData endpoints.
+
+### How to Run API Tests
+
+1. Start the CAP server using `cds watch`
+2. Open the file `test.http`
+3. Click "Send Request" above any request
+
+The HTTP response is displayed directly in the editor.
+
+### Covered Test Scenarios
+
+The following scenarios are covered:
+- Service availability check
+- Read products (GET)
+- Create product (POST)
+- Delete product (DELETE)
+- Validation and error handling
+
+## Testing Strategy Justification
+
+The test.http approach was selected because it is lightweight, easy to use, and does not require additional frameworks. It allows clear inspection of requests and responses and is suitable for development and validation phases.
+
+## Conclusion
+
+This project demonstrates a complete CAP backend with a SAPUI5 frontend, documented API testing, and a simple local execution model. The solution follows SAP best practices and is easy to maintain and extend.
+
+## Key Commands Summary
+
+```bash
+npm install
+cds watch
