@@ -115,6 +115,12 @@ sap.ui.define([
                 MessageToast.show("Product has been deleted successfully");
             });
         },
+        onPress: function (oEvent) {
+            var oItem = oEvent.getSource();
+            var oContext = oItem.getBindingContext();
+            var sID = oContext.getProperty("ID");
+            this.getOwnerComponent().getRouter().navTo("RouteDetail", {productId: sID});
+        },
 
         onSave: function () {
             this.getView().getModel().submitBatch("updateGroup");

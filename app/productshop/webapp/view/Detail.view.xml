@@ -1,0 +1,15 @@
+<mvc:View controllerName="productshop.webapp.controller.Detail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+    <Page id="_IDGenPage1" title="Product detail" showNavButton="true" navButtonPress=".onNavBack">
+        <content>
+            <ObjectHeader id="_IDGenObjectHeader" title="ID : {ID}" />
+            <f:SimpleForm id="_IDGenSimpleForm" title="Details">
+                <f:content>
+                    <Label id="_IDGenLabel4" text="Name" />
+                    <Text id="_IDGenText" text="{name}" />
+                    <Label id="_IDGenLabel5" text="Category" />
+                    <Text id="_IDGenText3" text="{category}" />
+                </f:content>
+            </f:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>

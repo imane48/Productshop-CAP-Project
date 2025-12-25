@@ -4,7 +4,7 @@
         <content>
             <SearchField id="SearchFieldId" placeholder="Filter by category (Drinks ou Grocery)" search=".onFilter" width="98%" class="sapUiSmallMargin" />
             
-            <Table id="productTable" items="{path: '/Products', parameters: { '$$updateGroupId': 'updateGroup' }}" mode="SingleSelectMaster" selectionChange=".onSelectionChange">
+            <Table id="productTable" items="{path: '/Products', parameters: { '$$updateGroupId': 'updateGroup' }}" mode="SingleSelectMaster" selectionChange=".onPress">
                 <headerToolbar>
                     <OverflowToolbar id="ToolbarId">
                         <Title id="titleId" text="Products"/>
@@ -24,7 +24,8 @@
                             <Text id="idTextId1" text="{ID}" />
                             <Text id="_IDGenText1" text="{name}" />
                             <Text id="_IDGenText2" text="{category}" />
-                            <HBox id="_IDGenHBox" width="60%" justifyContent="End">
+                            <HBox id="_IDGenHBox" width="70%" justifyContent="End">
+                                <Button id="_IDGenButton6" icon="sap-icon://navigation-right-arrow" press=".onPress" class="sapUiTinyMarginEnd" />
                                 <Button id="_IDGenButton2" icon="sap-icon://edit" type="Ghost" press=".onEdit" class="sapUiTinyMarginEnd" />
                                 <Button id="_IDGenButton3" icon="sap-icon://delete" type="Reject" press=".onDelete" />
                             </HBox>

@@ -98,12 +98,21 @@
           "target": [
             "TargetView"
           ]
+        },
+        {
+          "name": "RouteDetail",
+          "pattern": "Products/{productId}",
+          "target": ["TargetDetail"]
         }
       ],
       "targets": {
         "TargetView": {
           "id": "View",
           "name": "View"
+        },
+        "TargetDetail": {
+        "id": "Detail",
+        "name": "Detail"
         }
       }
     },
